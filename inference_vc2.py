@@ -27,12 +27,12 @@ def conversion(content_wav_path, reference_wav_path, output_path):
 
 if __name__ == "__main__":
     # ========= EvalSet =========
-    save_root = "/mnt/workspace/zhangxueyao/VersaVoice/results"
+    save_root = "./results"
     model_name = "2024_CosyVoice2_VC"
     save_root = os.path.join(save_root, model_name)
     os.makedirs(save_root, exist_ok=True)
 
-    evalset_root = "/mnt/workspace/zhangxueyao/VersaVoice/Evalset"
+    evalset_root = "/storage/zhangxueyao/workspace/SpeechGenerationYC/EvalSet/vc"
     group2eval = {"g0": "VCTK", "g1": "SeedEval", "g2": "L2Arctic", "g3": "ESD"}
 
     # ========= g0, g1 =========
