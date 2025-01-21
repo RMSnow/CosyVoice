@@ -57,11 +57,18 @@ if __name__ == "__main__":
 
     # Raw CosyVoice2 sampling: top_p = 0.8, top_k = 25, temperature = 1.0
 
-    top_p = 1.0
-    top_k = 40
-    temp_list = [0.6, 0.8, 1.0, 1.2, 1.4]
+    # top_p = 1.0
+    # top_k = 40
+    # temp_list = [0.6, 0.8, 1.0, 1.2, 1.4]
 
-    save_root = "/storage/zhangxueyao/dataset/data_rlhf/rlhfv1"
+    # save_root = "/storage/zhangxueyao/dataset/data_rlhf/rlhfv1_repetition"
+    # os.makedirs(save_root, exist_ok=True)
+
+    top_p = 0.8
+    top_k = 25
+    temp_list = [1.0]
+
+    save_root = "/storage/zhangxueyao/dataset/data_rlhf/rlhfv1_mistakable_prosody"
     os.makedirs(save_root, exist_ok=True)
 
     group_dirs = glob(os.path.join(save_root, "ar_soundstorm/*"))
